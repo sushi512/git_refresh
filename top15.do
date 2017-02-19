@@ -19,14 +19,13 @@ replace crscode="120" if crscode=="121" | crscode=="122"
 replace crscode="150" if crscode=="151" | crscode=="152"
 replace crscode="310" if crscode=="311" | crscode=="312" | crscode=="313"
 replace crscode="320" if crscode=="321" | crscode=="322" | crscode=="323"
-replace crscode="400" if crscode=="410" | crscode=="430"
-replace crscode="500" if crscode=="510" | crscode=="520" | crscode=="530"
-replace crscode="700" if crscode=="720" | crscode=="730" | crscode=="740"
-replace crscode="400" if crscode=="410" | crscode=="430"
+
 collapse (sum) comm (min) year (max) end, by(donor crscode)
 gsort + donor - comm
 drop if donor==donor[_n-15]
 order donor crscode com year end
+
+further adding some code here and deleting some on top of this section
 
 
 

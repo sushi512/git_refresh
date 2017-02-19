@@ -5,7 +5,9 @@ version 12.1
 set mem 700m
 set mat 2000
 
-set more off
+set more off +1000
+
+***adding some more code here to improve the layout of the reports
 
 
 ***********************************************************************************
